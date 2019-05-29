@@ -1,0 +1,13 @@
+27.05.19
+lo primero que hicimos es usar postman, lo abrimos y copiamos un url, el api key el valor y la api key
+
+usaremo axios y reuest
+ambas hacen lo mismo trabajan con peticiones asia servicios rest
+axios trabaja en base a Promises, y request trabaja en base a callback
+
+28.05.19
+nos creamos una cuenta en openwheathermap que soporta 200 o 2000 peteciones de una misma APIKEY por hora
+las credenciales de la cuenta que creamos son 
+nombre: giancarlo
+email: giancarlodp74@gmail.com 
+pass: Jesucristo

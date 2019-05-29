@@ -32,10 +32,16 @@ const colors = require('colors');
 //     console.log(err);
 // });
 
+// en la funcion de abajo estamos usando el async y await a su mas alto nivel 
 let getInfop = async (direccion) => {
     try {
+        // en la variable latlongCiudad estamos almacenando lo que devuelve el return de la promesa getLatlong que nosotros creamos
         const latLongCiudad = await getLatLong(direccion);
+        // en la constante temp estamos almacenando lo que devuelve la promesa que nosotros creamos getClima
         const temp = await getClima(latLongCiudad.lat, latLongCiudad.long);
+        // aqui estamos retornando un objeto, un objeto esta formado en pares pero aqui solo estamos usando el nombre de la constantes previamente declaradas
+        // en ES6 es permitido hacer esto, lo normal seria asi temp: temp, pero como las variables tiene el mismo nombre que la propiedades del objeto el ES6 
+        // el ES6 lo interpreta que son el mismo nombre y se lo autoasigna y el codigo queda mas lejible sin tanta palabreria
         return {
             temp,
             latLongCiudad,
@@ -46,6 +52,7 @@ let getInfop = async (direccion) => {
     }
 }
 
+// estamos ejecuntando la promesa previmente creada arriba
 getInfop(argv.direccion).then(response => {
     console.log('=============================== CLIMA ==================================='.green);
     console.log(`La temperatura de ${response.direccion.green} es de: ${response.temp} grados °C`);

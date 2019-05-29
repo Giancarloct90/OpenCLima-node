@@ -1,7 +1,7 @@
 27.05.19
 lo primero que hicimos es usar postman, lo abrimos y copiamos un url, el api key el valor y la api key
 
-usaremo axios y reuest
+usaremo axios y request
 ambas hacen lo mismo trabajan con peticiones asia servicios rest
 axios trabaja en base a Promises, y request trabaja en base a callback
 
